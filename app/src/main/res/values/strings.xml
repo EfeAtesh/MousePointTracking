@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MPointTracking</string>
+    <string name="accessibility_service_description">Tracks user clicks for MPointTracking</string>
 </resources>
