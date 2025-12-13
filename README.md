@@ -6,7 +6,8 @@ Happy usability tests!
 HCI
 # How to use
 
--Open the application in windowed mode
--Press the start button
--After you have done your or user have done "touchings" press the stop button
--Voila! Your data is saved in Documents/MPointTracking direction as ".csv" formatted file!
+
+- Open the application in windowed mode
+- Press the **Start** button
+- After you (or the user) have finished touching/clicking, press the **Stop** button
+- Voilà! Your data is saved in `Documents/MPointTracking` as a `.csv` file
