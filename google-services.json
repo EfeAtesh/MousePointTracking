@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1007267158466",
+    "project_id": "mouse-point-tracker",
+    "storage_bucket": "mouse-point-tracker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007267158466:android:2a2b7b20882915804a9e5b",
+        "android_client_info": {
+          "package_name": "com.efeates.mpointtracking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCom4nynSGyFmToT1RNxB4YQNEdf8X2vx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

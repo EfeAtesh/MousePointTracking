@@ -1,42 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MousePointTracer"
-        android:textSize="30dp"
-        android:gravity="center"
         android:layout_marginTop="40dp"
-        />
+        android:gravity="center"
+        android:text="MousePointTracer"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/start"
-        android:layout_marginTop="40dp"
-        android:layout_margin="30dp"
-        android:text="Start Tracking"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Start Tracking" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Record Situation:"
-        android:textSize="20dp"
-        android:layout_marginTop="40dp"
         android:layout_marginLeft="5dp"
-        />
+        android:layout_marginTop="40dp"
+        android:text="Record Situation:"
+        android:textSize="20dp" />
+
     <TextView
         android:id="@+id/programmeSituation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Is not Recording"
         android:layout_margin="5dp"
         android:layout_marginTop="20dp"
-        android:textSize="20dp"
-        />
+        android:text="Is not Recording"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
 
 </LinearLayout>

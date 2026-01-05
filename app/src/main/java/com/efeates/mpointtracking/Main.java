@@ -22,6 +22,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.io.File;
@@ -39,12 +42,22 @@ public class Main extends AppCompatActivity {
     
     private boolean isRecording = false;
     private TextView textView;
+    private AdView mAdView;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.onlyscreen);
+
+        // Ad logic start
+        MobileAds.initialize(this, initializationStatus -> {});
+        mAdView = findViewById(R.id.adView);
+        if (mAdView != null) {
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
+        // Ad logic end
 
         textView = findViewById(R.id.programmeSituation);
 
@@ -106,6 +119,26 @@ public class Main extends AppCompatActivity {
         save2CSV();
         Log.d("TRACKER", "Total points captured: " + points.size());
     }
+
+    // Ad lifecycle start
+    @Override
+    protected void onPause() {
+        if (mAdView != null) mAdView.pause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mAdView != null) mAdView.resume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mAdView != null) mAdView.destroy();
+        super.onDestroy();
+    }
+    // Ad lifecycle end
 
     protected void save2CSV() {
         Context currentContext = this;

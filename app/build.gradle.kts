@@ -36,6 +36,8 @@ android {
 dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
+    implementation(libs.play.services.ads)
+    implementation(platform("com.google.firebase:firebase-bom:34.7.0"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
